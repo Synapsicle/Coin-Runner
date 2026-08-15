@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://vi67bicciobq"]
+
+[ext_resource type="PackedScene" uid="uid://dyla8utjrt1tp" path="res://Assets/Scenes/floor_spike.tscn" id="1_81btc"]
+
+[node name="Node2D" type="Node2D" unique_id=1237722405]
+
+[node name="Area2D" parent="." unique_id=196444362 instance=ExtResource("1_81btc")]
+position = Vector2(1, 0)
+
+[node name="Area2D2" parent="." unique_id=302313903 instance=ExtResource("1_81btc")]
+position = Vector2(17, 0)
+
+[node name="Area2D3" parent="." unique_id=1529335811 instance=ExtResource("1_81btc")]
+position = Vector2(33, 0)
+
+[node name="Area2D4" parent="." unique_id=649300317 instance=ExtResource("1_81btc")]
+position = Vector2(49, 0)
+
+[node name="Area2D5" parent="." unique_id=1972266504 instance=ExtResource("1_81btc")]
+position = Vector2(65, 0)
+
+[node name="Area2D6" parent="." unique_id=468878635 instance=ExtResource("1_81btc")]
+position = Vector2(81, 0)
+
+[node name="Area2D7" parent="." unique_id=1469742353 instance=ExtResource("1_81btc")]
+position = Vector2(97, 0)
+
+[node name="Area2D8" parent="." unique_id=1209954727 instance=ExtResource("1_81btc")]
+position = Vector2(113, 0)
+
+[node name="Area2D9" parent="." unique_id=163526872 instance=ExtResource("1_81btc")]
+position = Vector2(-15, 0)
+
+[node name="Area2D10" parent="." unique_id=865874947 instance=ExtResource("1_81btc")]
+position = Vector2(-30, 0)
+
+[node name="Area2D11" parent="." unique_id=537431521 instance=ExtResource("1_81btc")]
+position = Vector2(-46, 0)
+
+[node name="Area2D12" parent="." unique_id=929798730 instance=ExtResource("1_81btc")]
+position = Vector2(-62, 0)
+
+[node name="Area2D13" parent="." unique_id=1952333579 instance=ExtResource("1_81btc")]
+position = Vector2(-78, 0)
+
+[node name="Area2D14" parent="." unique_id=728296639 instance=ExtResource("1_81btc")]
+position = Vector2(-94, 0)
+
+[node name="Area2D15" parent="." unique_id=806536934 instance=ExtResource("1_81btc")]
+position = Vector2(-110, 0)
+
+[node name="Area2D16" parent="." unique_id=303519695 instance=ExtResource("1_81btc")]
+position = Vector2(-126, 0)
+
+[node name="Area2D17" parent="." unique_id=569427124 instance=ExtResource("1_81btc")]
+position = Vector2(129, 0)
+
+[node name="Area2D18" parent="." unique_id=1146311008 instance=ExtResource("1_81btc")]
+position = Vector2(145, 0)
+
+[node name="Area2D19" parent="." unique_id=1057091263 instance=ExtResource("1_81btc")]
+position = Vector2(161, 0)
+
+[node name="Area2D20" parent="." unique_id=1749156824 instance=ExtResource("1_81btc")]
+position = Vector2(177, 0)
+
+[node name="Area2D21" parent="." unique_id=1771751700 instance=ExtResource("1_81btc")]
+position = Vector2(193, 0)
+
+[node name="Area2D22" parent="." unique_id=1555409787 instance=ExtResource("1_81btc")]
+position = Vector2(209, 0)
+
+[node name="Area2D23" parent="." unique_id=1090622008 instance=ExtResource("1_81btc")]
+position = Vector2(225, 0)
+
+[node name="Area2D24" parent="." unique_id=1568965355 instance=ExtResource("1_81btc")]
+position = Vector2(-127, 0)
