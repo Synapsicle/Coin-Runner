@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://bh4rm33xdxpda"]
+
+[ext_resource type="Texture2D" uid="uid://b1t124o33hhyy" path="res://Assets/Art/jump_pad/spritesheet.png" id="1_fx4h5"]
+[ext_resource type="Texture2D" uid="uid://bx8inpbeapgvw" path="res://Assets/Art/jump_pad/jump-pad-idle.png" id="2_eiikd"]
+
+[sub_resource type="GDScript" id="GDScript_fx4h5"]
+script/source = "extends Area2D
+
+@export var BLUE_JUMP_PAD_BOOST = -800
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group(\"Player\"):
+		body.velocity.y = BLUE_JUMP_PAD_BOOST
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xn4po"]
+size = Vector2(32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0phm"]
+atlas = ExtResource("1_fx4h5")
+region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_123go"]
+atlas = ExtResource("1_fx4h5")
+region = Rect2(17, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmtkx"]
+atlas = ExtResource("1_fx4h5")
+region = Rect2(34, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syoqb"]
+atlas = ExtResource("1_fx4h5")
+region = Rect2(0, 17, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kr3dc"]
+atlas = ExtResource("1_fx4h5")
+region = Rect2(17, 17, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sed4q"]
+atlas = ExtResource("2_eiikd")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0phm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_123go")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmtkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syoqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kr3dc")
+}],
+"loop": 1,
+"name": &"boing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sed4q")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="jump_pad" type="Area2D" unique_id=2127483596]
+script = SubResource("GDScript_fx4h5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1530800841]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_xn4po")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=623889430]
+texture_filter = 1
+position = Vector2(1, -11)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_yf5fn")
+animation = &"idle"
+frame_progress = 0.59828246
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
