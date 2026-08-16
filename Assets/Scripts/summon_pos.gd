@@ -13,6 +13,7 @@ var fruit_sprites = [
 	preload("res://Assets/Art/Fruit/strawberry.png")
 ]
 
+
 func _ready() -> void:
 	SaveData.fruit_spawn.connect(spawn_fruit)
 
@@ -22,11 +23,14 @@ func spawn_fruit(spawner_id: int) -> void:
 		return
 	
 	fruit_sprite.texture = fruit_sprites[randi_range(0, fruit_sprites.size() - 1)]
-	print(str(id) + " Has a fruit")
+	
+	SaveData.isFruitSpawned = true
+	
+	print("Spawner ", id, " has a fruit")
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player") and SaveData.isFruitSpawned:
+	if body.is_in_group("Player") and fruit_sprite.texture != null:
 		SaveData.FruitAmount += 1
 		
 		fruit_sprite.texture = null
