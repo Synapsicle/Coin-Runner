@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bsn0rkq3l0wty"]
+
+[ext_resource type="Script" uid="uid://c4u8x30r1gwab" path="res://Assets/Scripts/summon_pos.gd" id="1_5q7ku"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(25, 24)
+
+[node name="Summon Pos" type="Area2D" unique_id=1429824421]
+script = ExtResource("1_5q7ku")
+
+[node name="Fruit sprite" type="Sprite2D" parent="." unique_id=405713771]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1473960892]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

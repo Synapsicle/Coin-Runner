@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://vi67bicciobq"]
 
-[ext_resource type="PackedScene" uid="uid://dyla8utjrt1tp" path="res://Assets/Scenes/floor_spike.tscn" id="1_81btc"]
+[ext_resource type="PackedScene" uid="uid://dyla8utjrt1tp" path="res://Assets/Scenes/Objects/floor_spike.tscn" id="1_81btc"]
 
 [node name="Node2D" type="Node2D" unique_id=1237722405]
 

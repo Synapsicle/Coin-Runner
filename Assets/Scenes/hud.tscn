@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://pd2mkvmy61xf"]
+
+[ext_resource type="Texture2D" uid="uid://dwv0fqir8yuab" path="res://Assets/Art/heart/big heart.png" id="1_th0pt"]
+[ext_resource type="FontFile" uid="uid://cd2ru4y60ycpl" path="res://Assets/Font/KGMissSteward.otf" id="2_xs5ck"]
+[ext_resource type="Script" uid="uid://d1vyst010e5ff" path="res://Assets/Scripts/score_handler.gd" id="3_xs5ck"]
+
+[node name="Hud" type="Control" unique_id=466913228]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+offset_bottom = -547.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=308163877]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1001331841]
+anchors_preset = -1
+anchor_right = 0.043
+anchor_bottom = 0.029000001
+offset_right = 0.4639969
+offset_bottom = -3.7919998
+offset_transform_scale = Vector2(2, 2)
+
+[node name="Heart 1" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=1485593141]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+offset_transform_scale = Vector2(2, 2)
+texture = ExtResource("1_th0pt")
+
+[node name="Heart 2" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=1746464267]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 0)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+offset_transform_scale = Vector2(2, 2)
+texture = ExtResource("1_th0pt")
+
+[node name="Heart 3" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=591014331]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 0)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+offset_transform_scale = Vector2(2, 2)
+texture = ExtResource("1_th0pt")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=810548564]
+offset_left = 922.0
+offset_top = 8.0
+offset_right = 1144.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("2_xs5ck")
+theme_override_font_sizes/font_size = 32
+text = "Fruits collected: 0"
+horizontal_alignment = 3
+script = ExtResource("3_xs5ck")
