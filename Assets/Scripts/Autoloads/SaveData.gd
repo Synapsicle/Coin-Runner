@@ -8,7 +8,7 @@ var fruit_spawn_id: int = -1
 
 
 func pick_fruit_spawner() -> void:
-	var total_ids := 6
+	var total_ids := 7
 	
 	fruit_spawn_id = randi_range(0, total_ids - 1)
 	isFruitSpawned = true
@@ -16,7 +16,3 @@ func pick_fruit_spawner() -> void:
 	fruit_spawn.emit(fruit_spawn_id)
 	
 	print("Fruit spawned at spawner ID: ", fruit_spawn_id)
-
-func _physics_process(delta: float) -> void:
-	if not isFruitSpawned:
-		pick_fruit_spawner()
