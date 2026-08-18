@@ -8,7 +8,7 @@ var fruit_spawn_id: int = -1
 
 
 func pick_fruit_spawner() -> void:
-	var total_ids := 7
+	var total_ids := 8
 	
 	fruit_spawn_id = randi_range(0, total_ids - 1)
 	isFruitSpawned = true
