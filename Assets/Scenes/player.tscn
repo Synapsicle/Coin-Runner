@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cqlnjc5u1fh2e" path="res://Assets/Art/person/Fall (32x32).png" id="3_c3tg1"]
 [ext_resource type="Texture2D" uid="uid://dcrteb2nvn0rb" path="res://Assets/Art/person/Hit (32x32).png" id="4_lerqx"]
 [ext_resource type="Texture2D" uid="uid://cye5ffib67eiy" path="res://Assets/Art/person/Run (32x32).png" id="5_jp3cw"]
+[ext_resource type="Texture2D" uid="uid://dpktle32lvusu" path="res://Assets/Art/bg.png" id="6_w3t24"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_acytr"]
 atlas = ExtResource("2_w3t24")
@@ -267,3 +268,8 @@ autoplay = "Idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=450117686]
 position = Vector2(11, -14.5)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=1891598338]
+z_index = -100
+position = Vector2(1, 0)
+texture = ExtResource("6_w3t24")
